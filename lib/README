@@ -1,16 +1,46 @@
-# LED Control with OneButton Library (PlatformIO)
 
-Dự án điều khiển LED bằng nút nhấn sử dụng thư viện **OneButton** trên nền tảng **PlatformIO**.
+This directory is intended for project specific (private) libraries.
+PlatformIO will compile them to static libraries and link into the executable file.
 
-## Tính năng
-- **Single Click (Nhấn đơn):** Bật / Tắt LED.
-- **Double Click (Nhấn kép):** Chuyển sang chế độ nháy LED (Chu kỳ 500ms).
-- **Non-blocking Code:** Đọc nút nhấn mượt mà, không bị hoãn do dùng `millis()`.
+The source code of each library should be placed in a separate directory
+("lib/your_library_name/[Code]").
 
-## Kết nối phần cứng
-- **Nút nhấn:** Chân D2 <-> GND (dùng Pull-up nội).
-- **LED:** Chân D13 <-> GND (qua điện trở 220Ω).
+For example, see the structure of the following example libraries `Foo` and `Bar`:
 
-## Nền tảng & Thư viện
-- **IDE / Environment:** VS Code và PlatformIO
-- **Library:** [OneButton](https://github.com/mathertel/OneButton)
+|--lib
+|  |
+|  |--Bar
+|  |  |--docs
+|  |  |--examples
+|  |  |--src
+|  |     |- Bar.c
+|  |     |- Bar.h
+|  |  |- library.json (optional. for custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
+|  |
+|  |--Foo
+|  |  |- Foo.c
+|  |  |- Foo.h
+|  |
+|  |- README --> THIS FILE
+|
+|- platformio.ini
+|--src
+   |- main.c
+
+Example contents of `src/main.c` using Foo and Bar:
+```
+#include <Foo.h>
+#include <Bar.h>
+
+int main (void)
+{
+  ...
+}
+
+```
+
+The PlatformIO Library Dependency Finder will find automatically dependent
+libraries by scanning project source files.
+
+More information about PlatformIO Library Dependency Finder
+- https://docs.platformio.org/page/librarymanager/ldf.html
